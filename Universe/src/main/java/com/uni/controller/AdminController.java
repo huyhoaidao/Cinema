@@ -11,4 +11,9 @@ public class AdminController {
 		
 		return "admin/admin.html";
 	}
+	@RequestMapping("chart")
+	public String chart() {
+		
+		return "admin/chart/charts.html";
+	}
 }

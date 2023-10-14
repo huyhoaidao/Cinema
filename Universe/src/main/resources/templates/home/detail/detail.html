@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Universe</title>
+  <link rel="shortcut icon" href="/assets/Images/2.png " type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="/assets//statics/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/assets/statics/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/statics/style-min.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px red !important;
+  }
+
+  .buddy {
+    cursor: pointer;
+  }
+
+ header {
+	position: fixed;
+	z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.155s ease-in-out;
+  }
+  
+  header.scrolled{
+    opacity: 0.75;
+  }
+
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  #scrollToTopButton:hover,
+  i:hover {
+    background-color: white;
+    color: red;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+
+
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  #navbarNav.nav-item.nav-link a:hover {
+    color: red;
+  }
+
+  .nav-link:hover {
+    color: red;
+  }
+
+  .nav-item :hover {
+    margin-bottom: 10px;
+    /* background-color: aquamarine; */
+    border-bottom: 3px;
+    border-color: red;
+    border-bottom-style: solid;
+  }
+
+  #header-nav .nav-link a:hover {
+    color: red;
+  }
+
+  .newsImg{
+        min-width: 200px;
+        min-height: 275px;
+        max-width: 200px;
+        max-height: 275px;
+        margin-left: 6px;
+    }
+    .singleNewsComponent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc{
+        margin: 8px;
+        font-size: 16px;
+    }
+    .descContainer {
+      padding: 10px;
+    }
+    .newsTitle{
+        color: white;
+    }
+    .carousel-inner {
+      cursor: pointer;  
+    }
+
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 1000);
+
+</script>
+<body style="background-image: url(/assets/Images/back.jpg);background-size: cover;">
+
+
+<header style="width: 100%;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html"><img class="logo" src="/assets/Images/2.png" alt="" width="30"
+          height="24"></a>
+      <button id="nav" class="navbar-toggler" style="background-color:#8b0000" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link active s" aria-current="page" href="home.html" onMouseOver="this.style.color='red'"
+              onMouseOut="this.style.color='white'">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'"
+              onMouseOut="this.style.color='white'">Phim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'"
+              onMouseOut="this.style.color='white'">Lịch Chiếu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'"
+              onMouseOut="this.style.color='white'">Rạp Và Giá</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'"
+              onMouseOut="this.style.color='white'">Khuyến Mãi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'"
+              onMouseOut="this.style.color='white'">Liên Hệ</a>
+          </li>
+          <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+            <li>
+              <button type="button" class="btn btn-light" onclick="logout()" onMouseOver="this.style.color='red'"
+                onMouseOut="this.style.color='white'">Đăng Nhập / Đăng Kí</button>
+            </li>
+          </div>
+        </ul>
+        <form id="searchForm" class="d-flex">
+          <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+          <button class="btn btn-danger" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    </nav>
+    
+
+
+</header>
+<br><br><br><br><br><br>
+  <div class="scroll-bar">
+    <!-- navbar starts -->
+
+  
+    <!-- navbar ends -->
+    <!-- <marquee>Welcome To <i>ApnaTheatre</i>.com<sup>&reg;</sup></marquee> -->
+    <!-- <label class="online">Stream Latest Movies Now!</label> -->
+
+
+	<div class="container-fluid">
+		<div class="card-body mx-auto" style="width: 75%;">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-5">
+					<div class="pro-img-details text-center">
+						<img src="/assets/Images/3-iron.jpg" class="d-block w-100" width="100%"
+							alt="">
+					</div>
+				</div>
+				<div class="col-sm-6 col-6  shadow-sm rounded-3 ">
+                        <h4 class="mt-3">NHÂN DUYÊN TIỀN ĐÌNH (T13)</h4>
+
+                        <div class="ms-1 mb-2"><span class="fs-6 text-warning">Khởi chiếu : </span><span class="fs-6">Từ 12/09/2022</span></div>
+                        <div class="ms-1 mb-2"><span class="fs-6 text-warning">Thể loại : </span><span class="fs-6">Tình Cảm, Phim Hài</span></div>
+                        <div class="ms-1 mb-2"><span class="fs-6 text-warning">Diễn viên : </span><span class="fs-6">Yoo Hae-jin, Kim Hee-seon, Cha In-pyo, Jin Seon-kyu, Han Seon-hwa, Lee Joon-hyuk, Yeom Hye-ran,...</span></div>
+                        <div class="ms-1 mb-2"><span class="fs-6 text-warning">Đạo diễn : </span><span class="fs-6">Lee Han</span></div>
+
+                        <div class="film-item-type">
+                            <span class="icon-2d"></span><span class="icon-am3d"></span><span class="icon-3d"></span>
+                        </div>
+                        <div class="ms-1 mb-2"><span class="fs-6 text-warning">Nội dung : </span>
+                        <span class="ms-1 mb-3 fs-6">Chuyện phim xoay quanh nhân vật Chi-ho (Yoo Hae-jin) - nhà nghiên cứu bim bim với khả năng nếm vị xuất chúng, nhưng lại ngờ nghệch với mọi thứ xung quanh.
+                             Chi-ho là một người cực kỳ hướng nội, thích ở một mình và sống như một cái máy được lập trình sẵn mà không hề mắc 
+                             lỗi dù chỉ một giây. Trong lúc phải đi trả nợ thay cho người anh trai cờ bạc (Cha In-pyo), Chi-ho đã gặp gỡ “nhân viên đòi nợ”
+                              Il-young - người phụ nữ hướng ngoại, luôn suy nghĩ tích cực về cuộc sống dù đang ở trong hoàn cảnh khó khăn của một bà mẹ đơn thân. 
+                              Khác biệt về tính cách lẫn ngoại hình khiến cả hai trở thành “trái dấu hút nhau”. Sự “trái dấu” này đã đẩy đưa cuộc tình của họ đến
+                             vô vàn tình huống “cười ra nước mắt” nhưng cũng không kém phần cảm xúc.</span></div>
+                        <div class="ms-1 mb-3">
+                            <span class="l-comment"></span><span class="l-comment"></span><span class="l-comment"></span><span class="l-comment"></span><span class="l-comment"></span>                                </div>
+                  <div class="d-flex justify-content-center">
+					<button class="btn btn-md btn-danger btn-rounded mr-1 mx-auto mt-3" style="width: 45%;"
+						data-toggle="tooltip" title="" data-original-title="Add to cart">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket-perforated me-1" viewBox="0 0 16 16">
+                            <path d="M4 4.85v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Zm-7 1.8v.9h1v-.9H4Zm7 0v.9h1v-.9h-1Z"/>
+                            <path d="M1.5 3A1.5 1.5 0 0 0 0 4.5V6a.5.5 0 0 0 .5.5 1.5 1.5 0 1 1 0 3 .5.5 0 0 0-.5.5v1.5A1.5 1.5 0 0 0 1.5 13h13a1.5 1.5 0 0 0 1.5-1.5V10a.5.5 0 0 0-.5-.5 1.5 1.5 0 0 1 0-3A.5.5 0 0 0 16 6V4.5A1.5 1.5 0 0 0 14.5 3h-13ZM1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v1.05a2.5 2.5 0 0 0 0 4.9v1.05a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-1.05a2.5 2.5 0 0 0 0-4.9V4.5Z"/>
+                          </svg>Đặt Vé</button>
+                        <button class="btn btn-md btn-danger btn-rounded mr-1 mx-auto mt-3" style="width: 45%;"
+						data-toggle="tooltip" title="" data-original-title="Add to cart">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube me-1" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                          </svg>Trailer</button>
+				</div>
+                </div>
+			</div>
+		</div>  
+	</div>
+	</div>
+
+      <!-------------------------------Footer-------------------------------->
+      <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+          <div class="footer-left">
+            <a href="home.html"><img class="footer-logo" src="/assets/Images/2.png" alt="" width="30"
+                height="24"></a>
+            <p class="footer-bottom-tagline">Watch! Chill! Repeat!</p>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">Follow Us</h2>
+            <ul class="footer-middle-list icons">
+              <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                  class="fab fa-facebook-f facebook" style="color:red"></i></a>
+              <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                  class="fab fa-twitter twitter" style="color:red"></i></a>
+              <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                  class="fab fa-linkedin linkedin" style="color:red"></i></a>
+              <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                  class="fab fa-instagram instagram" style="color:red"></i></a>
+              <a class="footer-links" href="https://github.com/QAZIMAAZARSHAD/Movie-Streaming-Website"
+                target="_blank"><i class="fab fa-github github" style="color:red"></i></a>
+            </ul>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">Services</h2>
+            <ul class="footer-middle-list">
+              <li class="footer-middle-list-item"><a href="home.html">Enjoy Latest Movies</a> </li>
+              <li class="footer-middle-list-item"><a href="web-series.html">Watch Web-Series</a> </li>
+              <li class="footer-middle-list-item"><a href="kids.html">Everything for Kids</a> </li>
+              <li class="footer-middle-list-item"><a href="news.html">Coming soon</a> </li>
+              <li class="footer-middle-list-item"><a href="premium.html">Get Premium Subscription</a> </li>
+              <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+            </ul>
+          </div>
+          <div class="footer-middle">
+            <h2 class="footer-heading">Try Our App</h2>
+            <ul class="footer-middle-list icons">
+              <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:red"></i></a>
+              <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color:red"></i></a>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <p class="footer-links">
+            <h2 class="footer-heading">Contact Us</h2>
+            <p class="footer-bottom-tagline">Feel free to contact us.</p>
+            <a class="footer-contact-button" href="contactus.html">Contact</a>
+            </p>
+          </div>
+        </div>
+        <hr class="footer-hr">
+        <!-- <div class="footer-copyright">
+        <p>Copyright &copy; and &reg; Since
+          <script>
+            document.write(new Date().getFullYear())
+          </script> Under ApnaTheatre.com : (Project Is Done By Qazi Maaz Arshad)
+        </p>
+      </div> -->
+      </footer>
+
+      <!----------------------scroll back to top button-->
+      <button id="scrollToTopButton" title="Go to top">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
+      <script>
+        $(document).ready(function () {
+          var scrollTopButton = document.getElementById("scrollToTopButton");
+          window.onscroll = function () { scrollFunction() };
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              scrollTopButton.style.display = "block";
+            } else {
+              scrollTopButton.style.display = "none";
+            }
+          }
+
+          $("#scrollToTopButton").click(function () {
+            $('html ,body').animate({ scrollTop: 0 }, 800)
+          });
+        });
+      </script>
+
+      <!-- footer scripts -->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="/assets/js/main-min.js"></script>
+
+      <script>
+        jQuery('#waterdrop').raindrops({
+          color: '#292c2f',
+          canvasHeight: 150,
+          density: 0.1,
+          frequency: 20
+        });
+      </script>
+      <script>
+        function logout() {
+          window.location.replace("login.html");
+        }
+      </script>
+
+      <script>
+         document.addEventListener('scroll',()=>{
+          const header = document.querySelector('header');
+          if(window.scrollY > 0){
+            header.classList.add('scrolled');
+          }else{
+            header.classList.remove('scrolled');
+          }
+         })
+      </script>
+      <!-- bootsstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+      <script src="/assets/statics/script.js"></script>
+</body>
+</html>
