@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SeatController {
 	@RequestMapping("seat")
 	public String seat() {
-		
 		return "home/seat/bookseat.html";
 	}
 }
