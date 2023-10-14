@@ -9,7 +9,6 @@ public class HomeController {
 	@RequestMapping("index")
 	public String home() {
 		
-		return "home/view.htmlskdafbjsbdfjabdsfj";
-		hvl,.vkvlj
+		return "home/view.html";
 	}
 }
