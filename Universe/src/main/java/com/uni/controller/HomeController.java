@@ -11,8 +11,9 @@ public class HomeController {
 		return "home/view.html";
 	}
 	
-	@RequestMapping("detail12")
+	@RequestMapping("detail")
 	public String detail() {
+		System.out.print("hoài nè");
 		return "home/detail/detail.html";
 	}
 	@RequestMapping("contact")
