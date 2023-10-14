@@ -12,7 +12,7 @@ public class HomeController {
 		return "home/view.html";
 	}
 	
-	@RequestMapping("detail")
+	@RequestMapping("detail12")
 	public String detail() {
 		
 		return "home/detail/detail.html";
