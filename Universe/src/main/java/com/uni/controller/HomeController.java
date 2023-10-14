@@ -12,9 +12,14 @@ public class HomeController {
 		return "home/view.html";
 	}
 	
-	@RequestMapping("detail")
+	@RequestMapping("detail12")
 	public String detail() {
 		
 		return "home/detail/detail.html";
+	}
+	@RequestMapping("contact")
+	public String contact() {
+		
+		return "home/contact/contact.html";
 	}
 }

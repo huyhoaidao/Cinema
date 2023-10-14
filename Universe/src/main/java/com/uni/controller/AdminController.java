@@ -16,4 +16,14 @@ public class AdminController {
 		
 		return "admin/chart/charts.html";
 	}
+	@RequestMapping("404")
+	public String error() {
+		
+		return "admin/error/404.html";
+	}
+	@RequestMapping("table")
+	public String table() {
+		
+		return "admin/table/table.html";
+	}
 }
